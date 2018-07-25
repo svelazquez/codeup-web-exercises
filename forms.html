@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Register With Us</title>
 </head>
 <body>
-$END$
+    <form method="POST" action="https://request-inspector.glitch.me">
+        <!-- Create a "How did you hear about us" section that contains radio buttons.
+            The values should be "billboard", "radio advertisement", "internet advertisement", and "other".
+            Only one of the values should be allowed to be selected at a time.
+            What happens if the inputs are given different name attributes?
+            Change these inputs so that multiple answers are allowed to be selected.
+            Create a dropdown that asks the user what web browser they are using.
+        -->
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <br>
+
+        <label for="bio">Bio</label>
+        <input type="textarea" id="bio" name="bio">
+        <br>
+
+        <label for="ref">How did you hear about us?</label>
+        <br>
+        <input type="radio" id="ref" name="reference1" value="billboard">Billboard
+        <br>
+        <input type="radio" id="ref" name="reference2" value="radio">Radio Advertisement
+        <br>
+        <input type="radio" id="ref" name="reference3" value="internet">Internet Advertisement
+        <br>
+        <input type="radio" id="ref" name="reference4" value="other">Other
+
+        <br>
+
+        <p>What web browser are you using?</p>
+        <select name="choice">
+            <option value="chrome">Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="opera">Opera</option>
+            <option value="other">Other</option>
+        </select>
+
+        <br>
+
+        <button>Submit</button>
+    </form>
 </body>
 </html>
