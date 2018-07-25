@@ -2,9 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Checkout</title>
 </head>
 <body>
-$END$
+<form method="POST" action="https://request-inspector.glitch.me">
+    <label for="cc_num">Credit Card Number:</label>
+    <input type="number" id="cc_num" name="cc_num" required>
+
+    <br>
+
+    <label for="exp">Expiration Date:</label>
+    <select name="exp" id="exp_month">
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+    </select>
+    <select name="exp" id="exp_date">
+        <option value="16">2018</option>
+        <option value="17">2019</option>
+        <option value="18">2020</option>
+        <option value="19">2021</option>
+        <option value="20">2022</option>
+        <option value="21">2023</option>
+    </select>
+
+    <br>
+
+    <label for="cvv">CVV:</label>
+    <input type="number" id="cvv" name="cvv" required>
+
+    <br>
+
+    <label for="billing_address">Billing Address:</label>
+    <input type="text" id="billing_address" name="billing address" required>
+
+    <br>
+
+    <label for="address_line2">Address line 2:</label>
+    <input type="text" id="address_line2" name="address_line2" required>
+
+    <br>
+    <label for="check">Keep this credit card on file for future transactions</label>
+    <input type="checkbox" id="check" name="check">
+
+    <br>
+
+    <button>Buy Now!</button>
+</form>
+
 </body>
 </html>
