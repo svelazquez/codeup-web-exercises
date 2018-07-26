@@ -1,0 +1,40 @@
+/*style page for Veridian Dynamics splash page*/
+
+.fancy-header {
+    text-align: center;
+}
+
+h1, h2, h4, h5, h6 {
+    text-decoration: underline;
+    color: aquamarine;
+}
+
+body {
+    color: darkseagreen;
+    background-color:darkslategrey;
+    background-image:url("../img/veridian-bkg.jpg");
+    background-size: contain;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+}
+
+li {
+    list-style: square inside url("../img/sqpurple.gif");
+}
+
+.pricing tr:hover {
+    background-color: aquamarine;
+}
+
+.pricing tr{
+    font-size: larger;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+a:visited {
+    color:#f600fd;
+}
