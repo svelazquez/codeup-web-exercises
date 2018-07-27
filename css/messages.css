@@ -4,30 +4,41 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
+
+    --text-info: indigo;
+    --bg-info: lavender;
+    --text-success: forestgreen;
+    --bg-success: paleturquoise;
+    --text-warning: olive;
+    --bg-warning: lemonchiffon;
+    --text-error: brown;
+    --bg-error: pink;
+*/
 }
 
+
+
 .message-info{
-    color: indigo;
-    background-color: lavender;
+    color: var(--text-info);
+    background-color: var(--bg-info);
 }
 
 .message-success{
-    color: forestgreen;
-    background-color: paleturquoise;
+    color: var(--text-success);
+    background-color: var(--bg-success);
 }
 
 .message-warning{
-    color: olive;
-    background-color: lemonchiffon;
+    color: var(--text-warning);
+    background-color: var(--bg-warning);
 }
 
 .message-error{
-    color: brown;
-    background-color: pink;
+    color: var(--text-error);
+    background-color:var(--bg-error);
 }
 
 .message {
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
-}
