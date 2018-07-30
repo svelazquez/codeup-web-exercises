@@ -1,0 +1,42 @@
+@media screen and (min-width: 992px){
+    .hidden-on-desktop{
+        visibility: hidden;
+    }
+    h1{
+        text-align: left;
+
+    }
+    li{
+        display: inline-block;
+        float: right;
+        background-color: transparent;
+    }
+
+}
+body{
+    font-family: Arial, Ubuntu, sans-serif;
+}
+div.alert-info.hidden-on-desktop{
+    text-align:center;
+    background-color: #C3FFFF;
+    border: .05em solid #CBCBCB;
+    padding: 1em;
+
+}
+h1{
+    text-align:center;
+}
+.nav-links {
+    list-style: none;
+    text-align: center;
+    padding: 0em;
+}
+
+li{
+    padding: 1em;
+    background-color: #CBCBCB;
+    margin: .5em;
+}
+img{
+    width:100%;
+}
