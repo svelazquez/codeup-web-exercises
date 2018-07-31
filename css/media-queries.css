@@ -1,20 +1,10 @@
-@media screen and (min-width: 992px){
-    .hidden-on-desktop{
-        visibility: hidden;
-    }
-    h1{
-        text-align: left;
 
-    }
-    li{
-        display: inline-block;
-        float: right;
-        background-color: transparent;
-    }
 
-}
+/*default layout: mobile first*/
 body{
     font-family: Arial, Ubuntu, sans-serif;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 div.alert-info.hidden-on-desktop{
     text-align:center;
@@ -26,10 +16,12 @@ div.alert-info.hidden-on-desktop{
 h1{
     text-align:center;
 }
-.nav-links {
+ul.nav-links {
     list-style: none;
     text-align: center;
     padding: 0em;
+    margin-left: -.5em;
+    margin-right: -.5em;
 }
 
 li{
@@ -39,4 +31,28 @@ li{
 }
 img{
     width:100%;
+}
+.sub-section{
+    font-style: italic;
+}
+
+
+
+/*screens larger than phones*/
+@media screen and (min-width: 992px){
+    .hidden-on-desktop{
+        visibility: hidden;
+    }
+    h1{
+        text-align: left;
+        float: left;
+    }
+    li{
+        display: inline-block;
+        float: right;
+        background-color: transparent;
+    }
+    .sub-section{
+        font-style: unset;
+    }
 }
