@@ -1,0 +1,49 @@
+.container{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.row {
+    width:100%;
+}
+s
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    background-color: #f600fd;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.column.half {
+    width: 50%;
+    background-color: red;
+}
+.column.third {
+    width: 33.33%;
+    background-color: orange;
+}
+.column.fourth{
+    width: 25%;
+    background-color: yellow;
+}
+.column.sixth {
+    width: 16.66%;
+    background-color: green;
+}
+.column.eighth{
+    width: 12.5%;
+    background-color: blue;
+}
+@media screen and (max-width: 768px) {
+    .column.third,
+    .column.half {
+        width: 100%;
+    }
+}
