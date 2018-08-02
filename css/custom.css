@@ -20,12 +20,3 @@
     padding-left: 7px;
 }
 
-.parent-card,
-.selection{
-    background-color: #d5edf8;
-}
-
-.child-card{
-    margin: 10px;
-}
-
