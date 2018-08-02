@@ -4,39 +4,164 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom.css">
-    <title>Order Pizza</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <title>Pizza World</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--nav bar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="nav-brand" href="#">Pizza World</a>
-        <a class="nav-item nav-link active" href="#">Order Online</a>
-        <a class="nav-item nav-link" href="#">Menu</a>
-        <form class="form-inline">
-            <input type="text" placeholder="Zip code">
-            <button type="button" class="btn btn-light">Search stores near you!</button>
-        </form>
-        <button type="button" class="btn btn-light float-right">Sign up</button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Pizza World</a>
 
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Order Online<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Menu</a>
+                </li>
+                <li>
+                    <form class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="inputZip2" class="sr-only">Zipcode</label>
+                            <input type="text" class="form-control" id="inputZip2" placeholder="Zipcode">
+                        </div>
+                        <button type="submit" class="btn btn-outline-secondary my-2 my-sm-0">Search for pizza now</button>
+                    </form>
+                </li>
+            </ul>
+            <span><i class="fas fa-user mr-sm-2"></i><a href="#">Login</a></span>
+            <!--<form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Login</button>
+            </form>-->
+
+        </div>
     </nav>
 
     <!--container for remaining content-->
     <div class="container-fluid">
-        <h1 class="welcome-text">Welcome to Pizza World!</h1>
-        <img class="img-header" src="img/pizza.png" alt="pizza">
+        <div class="jumbotron jumbotron-fluid pizza-hero-jumbotron">
+            <h1 class="display-4">Welcome to Pizza World!</h1>
 
+        </div>
 
         <!--pizza builder navigation tabs-->
-        <h2>Build your own pizza!</h2>
+        <h2>Build Your Own Pizza!</h2>
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link" href="#">Size and crust</a>
+                <a class="nav-link active" href="#"><span class="badge badge-secondary">1</span> Size and Crust</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><span class="badge badge-secondary">2</span> Cheese and Sauce</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><span class="badge badge-secondary">3</span> Toppings</a>
             </li>
         </ul>
 
+        <!--section 1 size and crust-->
+        <div class="card" style="width: 100%;">
+            <div class="card-header parent-card">
+                Choose Size and Crust
+            </div>
+            <div class="card ">
+                <div class="card-header">
+                    Hand tossed
+                </div>
+                <div class="card-body">
+                    Garic seasoned crust with a rich, buttery taste
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item selection"><input type="radio" id="ref" name="reference1" value="small"> Small (10")</li>
+                    <li class="list-group-item selection"><input type="radio" id="ref" name="reference1" value="medium"> Medium (12")</li>
+                </ul>
+            </div>
+
+            <div class="card child-card">
+                <div class="card-header">
+                    Crunchy thin crust
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Thin enough for the optimum crispy to crunchy ratio</li>
+                    <li class="list-group-item selection"><input type="radio" id="ref" name="reference1" value="medium"> Medium (12")</li>
+                    <li class="list-group-item selection"><input type="radio" id="ref" name="reference1" value="large"> Large (14")</li>
+                </ul>
+            </div>
+                </div>
+
+
+    <!--section 2 size and crust-->
+    <div class="card" style="width: 100%;">
+        <div class="card-header parent-card">
+            Choose Size and Crust
+        </div>
+        <div class="card child-card"">
+        <div class="card-header">
+            Hand tossed
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste</li>
+            <li class="list-group-item selection"><input type="radio" id="ref" name="reference1" value="small"> Small (10")</li>
+            <li class="list-group-item selection"><input type="radio" id="ref" name="reference1" value="medium"> Medium (12")</li>
+        </ul>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <div class="card child-card">
+        <div class="card-header">
+            Crunchy thin crust
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Thin enough for the optimum crispy to crunchy ratio</li>
+            <li class="list-group-item selection"><input type="radio" id="ref" name="reference1" value="medium"> Medium (12")</li>
+            <li class="list-group-item selection"><input type="radio" id="ref" name="reference1" value="large"> Large (14")</li>
+        </ul>
+    </div>
+    </div>
+
+
+    <!--section 1 size and crust-->
+    <div class="card" style="width: 100%;">
+        <div class="card-header parent-card">
+            Choose Size and Crust
+        </div>
+        <div class="card child-card"">
+        <div class="card-header">
+            Hand tossed
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste</li>
+            <li class="list-group-item selection"><input type="radio" id="ref" name="reference1" value="small"> Small (10")</li>
+            <li class="list-group-item selection"><input type="radio" id="ref" name="reference1" value="medium"> Medium (12")</li>
+        </ul>
+    </div>
+
+    <div class="card child-card">
+        <div class="card-header">
+            Crunchy thin crust
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Thin enough for the optimum crispy to crunchy ratio</li>
+            <li class="list-group-item selection"><input type="radio" id="ref" name="reference1" value="medium"> Medium (12")</li>
+            <li class="list-group-item selection"><input type="radio" id="ref" name="reference1" value="large"> Large (14")</li>
+        </ul>
+    </div>
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+
 </body>
 </html>
