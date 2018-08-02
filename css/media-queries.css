@@ -32,11 +32,18 @@ li{
 img{
     width:100%;
 }
+#social-media-links>img{
+    float: right;
+}
 .sub-section{
     font-style: italic;
 }
 
-
+#social-media-links{
+    max-width: 500px;
+    float: right;
+    width: 50%;
+}
 
 /*screens larger than phones*/
 @media screen and (min-width: 850px){
