@@ -1,8 +1,8 @@
 
 .pizza-hero-jumbotron{
-    background-color: transparent;
     background-image: url("../img/pizza.png");
     background-size: cover;
+    background-color: transparent;
 }
 
 .pizza-hero-jumbotron h1{
