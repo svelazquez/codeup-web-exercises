@@ -26,6 +26,7 @@
         return arr.sort().reverse();
     }
 
+
     var eighty1 = [-30,90];
     var eighty2 = [40,40];
     var eighty3 = [80, 43];
@@ -39,6 +40,7 @@
             return false;
         }
     }
+
 
     var str1 = "Romania";
     var str2 = "Pyre";
@@ -77,3 +79,20 @@
 
 
 
+console.log(factorial(10));
+function factorial(num){
+    if(num <= 1){
+        return num;
+    } else {
+        return num * factorial(num-1);
+    }
+}
+
+console.log(summation(10));
+function summation(num){
+    if(num === 0){
+        return 0;
+    } else {
+        return num + factorial(num-1);
+    }
+}
