@@ -6,10 +6,38 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <body>
+
+
+    <h1 id="nice-header" class="codeup">Nice n Good Heading</h1>
+    <div>
+        <p id="nice" class="codeup">very ok list</p>
+        <ul>
+            <li class="codeup">super good</li>
+            <li id="codeup">great and good</li>
+            <li>wonderful and nice</li>
+        </ul>
+    </div>
+
     <script>
-        $(document).ready(function(){
-            alert( 'The DOM has finished loading!');
-        });
+        // $(document).ready(function(){
+        // alert( 'The DOM has finished loading!');
+        // });
+            $('.codeup').css('border', '1px solid #F00');
+            $('h1, p, li').css('background-color', '#FFFF00')
+            $('li').css('font-size', '20px');
+            $('li').hover(
+                function(){
+                    $(this).css('background-color', '#E6E6FA');
+                },
+                function(){
+                    $(this).css('background-color', '#FFFF00');
+                }
+
+
+            );
+
+
+
     </script>
 
 </body>
