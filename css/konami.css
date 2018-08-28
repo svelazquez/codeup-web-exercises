@@ -1,0 +1,15 @@
+.container-fluid{
+    text-align: center;
+    align-content: center;
+    margin-top: 50px;
+}
+body{
+    font-family: Courier !important;
+}
+#input-box{
+    margin: auto;
+    background-color: #CBCBCB;
+    height: 50px;
+    width: 400px;
+    padding-top: 12.5px;
+}
