@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Konami Code</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 </head>
 <body>
-$END$
+<h1>Konami Code</h1>
+<img id="bob-dance" style="display:none;" src="img/bob-dancing.gif">
+<audio>
+    <source src="audio/shooting_stars.mp3">
+</audio>
+<!--<script src="js/jquery.js"></script>-->
+<script>
+    "use strict";
+
+    let kon = [38,38,40,40,37,39,37,39,66,65,13];
+    let arr = [];
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+
+
+           arr.push(event.keyCode);
+           console.log(arr);
+           console.log(kon);
+
+           if(kon.toString() === arr.toString()){
+
+                       $('#bob-dance').show(2000);
+                       var audio = $('audio')[0];
+                       audio.play();
+           }
+            if(kon.toString().length === arr.toString().length)
+            {
+                arr = [];
+            }
+
+
+
+
+    });
+
+
+
+</script>
 </body>
 </html>
