@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <title>Jquery FAQ</title>
+    <style>
+        .invisible{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>Park question</dt>
+        <dd class="invisible">Some detail</dd>
+        <dt>Park question</dt>
+        <dd class="invisible">Some detail</dd>
+        <dt>Park question</dt>
+        <dd class="invisible">Some detail</dd>
+        <dt>Park question</dt>
+        <dd class="invisible">Some detail</dd>
+        <dt>Park question</dt>
+        <dd class="invisible">Some detail</dd>
+        <dt>Park question</dt>
+        <dd class="invisible">Some detail</dd>
+        <dt>Park question</dt>
+        <dd class="invisible">Some detail</dd>
+        <dt>Park question</dt>
+        <dd class="invisible">Some detail</dd>
+        <dt>Park question</dt>
+        <dd class="invisible">Some detail</dd>
+        <dt>Park question</dt>
+        <dd class="invisible">Some detail</dd>
+    </dl>
+
+    <script>
+        $('dt').click(function() {
+            $('dd').toggleClass('invisible');
+        });
+        $('dd').click(function(){
+            $(this).css('background-color', '#FF0');
+        });
+    </script>
+</body>
+</html>
