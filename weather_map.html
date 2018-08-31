@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <style>
+        .weathers{
+            display: inline-block;
+            text-align: center;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: lightpink">
+    <h1>Weather Application</h1>
+    <div id="weather-box" style="background-color: linen; margin: 8px;"></div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script>
+        $.get("http://api.openweathermap.org/data/2.5/forecast?id=524901", {
+            APPID: "09be3d87503af2062f84723988428f58",
+            q:     "San Antonio, US",
+            units: "imperial"
+        })
+            .done(function(data){
+                console.log(data);
+
+                for(var i = 0; i<3; i++){
+                    let icon = data.list[i].weather[0].icon;
+                    let weatherData = data.list[i];
+                    $("#weather-box").append(
+                        "<div class='weathers'><h3>" + data.city.name + "</h3>"
+                        + "<br><strong>" + weatherData.main.temp
+                        + "</strong><br><img src='http://openweathermap.org/img/w/"
+                        + icon + ".png'>"
+                        + "<br><strong>"
+                        + weatherData.weather[0].main
+                        + ": </strong>"
+                        + weatherData.weather[0].description
+                        + "<br><strong>Wind: </strong>"
+                        + weatherData.wind.speed
+                        + "<br><strong>Pressure: </strong>"
+                        + weatherData.main.pressure + "</div>");
+                }
+            });
+    </script>
+</body>
+</html>
