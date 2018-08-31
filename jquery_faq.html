@@ -15,31 +15,30 @@
             color: rgba(0,0,0,0.66);
 
         }
-        .image1{
-            background-image: url('img/will-ferrell.jpg');
-        }
-        .image2{
-            background-image: url('img/will-ferrell2.jpg');
-        }
-        .image3{
-            background-image: url('img/will-ferrell3.jpg');
-        }
         .image1, .image2, .image3{
             background-size:cover;
             height: 15em;
             width: 12em;
+            border: 12px solid darksalmon;
         }
         body {
 
             /*background: #523811;*/
             padding: 50px 0;
-            background-image: url(http://www.pbs.org/nationalparks/media/images/wallpapers/wallpaper_yosemite_archive_1280x1024.jpg) ;
+            background-image: url(http://www.pbs.org/nationalparks/media/images/wallpapers/wallpaper_yosemite_archive_1280x1024.jpg);
             background-size: cover;
+
         }
     </style>
 </head>
 <body>
+<!----------Newsletter sign-up------------->
+<div class="alert alert-danger alert-dismissable" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    Would you like to sign up for our newsletter and live?
+</div>
 <div class="container-fluid">
+    <!----------Jumbotron----------------------->
     <div class="jumbotron">
         <div class="container text-center">
             <h1 class="display-4">National Parks FAQ</h1>
@@ -47,7 +46,7 @@
         </div>
     </div>
     <div class="row justify-content-center">
-    <dl class="text-light text-center">
+    <dl class="text-light text-center w-50">
         <dt>Is this a park question? What even is a park question?</dt>
         <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, autem consequatur eligendi, explicabo illum ipsa ipsum iusto libero magni minima modi non omnis porro ratione ullam voluptas voluptate? Delectus, quam.</dd>
         <dt>Is this a park question? What even is a park question?</dt>
@@ -102,39 +101,30 @@
     </div>
     <div class="row mt-10">
             <div class="column col-4">
-                <div class="frame1">
                 <div class="image1"></div>
-                </div>
+
                 <button type="button" class="button1 btn btn-outline-light">Switch Image</button>
             </div>
             <div class="column col-4">
-                <div class="frame2">
                 <div class="image2"></div>
-                </div>
+
                 <button type="button" class="button2 btn btn-outline-light">Switch Image</button>
             </div>
             <div class="column col-4">
-                <div class="frame3">
                 <div class="image3"></div>
-                </div>
                 <button type="button" class="button3 btn btn-outline-light">Switch Image</button>
             </div>
 
         </div>
 
     </div>
-<!----------Newsletter sign-up------------->
-    <div class="row text-light">
-            <h1>Would you like to sign up for our newsletter and live?</h1>
-            <span>XXXX</span>
 
-    </div>
 <!-----------Modal------------------------>
 <div class="modal fade" tabindex="-1" id="myModal" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Modal title</h4>
+                <h4 class="modal-title">Registration Modal</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
@@ -142,7 +132,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-secondary">Save changes</button>
+                <button type="button" class="btn btn-danger">Sign Up!</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -188,19 +178,24 @@
          * The right frame swaps to the left and takes the image from the frame
          * in the center.
          */
-        // var image1 = 'url('img/will-ferrell.jpg')';
-        // var image2 = 'url('img/will-ferrell.jpg')';
-        // var image3 = 'url('img/will-ferrell.jpg')';
-        //
-        //
-        // $('.button1').click(function(){
-        //    var left = image1.css('backgroundImage');
-        //    var center = image2.css('backgroundImage');
-        //
-        //     $('.image1').css('background-image', center);
-        //    $('.image2').css('background-image', left)
-        //
-        //    });
+
+        var image1 = "url('img/will-ferrell.jpg')";
+        var image2 = "url('img/will-ferrell2.jpg')";
+        var image3 = "url('img/will-ferrell3.jpg')";
+        $('.image1').css("background-image", image1);
+        $('.image2').css("background-image", image2);
+        $('.image3').css("background-image", image3);
+
+        $('.button1').click(function(){
+            var left = $('.image1').css("backgroundImage");
+            var center = $('.image2').css("backgroundImage");
+            var right = $('.image3').css("backgroundImage");
+
+            $('.image1').css('background-image', center);
+           $('.image2').css('background-image', right);
+           $('.image3').css('background-image', left)
+
+           });
 
 
         //newsletter
@@ -210,12 +205,12 @@
 
         });
 
-        //delay 8 seconds, then fade in h2 modal asking to register
-        setTimeout(function(){
-            $('#myModal').modal({
-                keyboard: false
-            })
-        }, 1000);
+        //delay 3 seconds, then fade in h2 modal asking to register
+        // setTimeout(function(){
+        //     $('#myModal').modal({
+        //         keyboard: false
+        //     })
+        // }, 3000);
 
 
     </script>
