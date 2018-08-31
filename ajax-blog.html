@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ajax Blog</title>
+    <title>Online Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 </head>
 <body>
+    <div class="jumbotron" style="background-color: #80adab">
+        <h1 class="display-4">My Blog Store</h1>
+        <p class="lead">for all your blogware needs</p>
+    </div>
+    <div id="posts" class="container-fluid"></div>
 
+    <script src="js/jquery.js"></script>
+    <script>
+
+        $.ajax("data/blog.json")
+        .done(function(data) {
+            data.forEach(function (data) {
+
+                $("#posts").append(
+                    "<h3>" + data.title + "</h3>" + data.content +  "<br><em>" + data.categories + "</em><hr>");
+
+             })
+         })
+
+        .fail(function() {
+        alert("mission failed, we'll get em next time")
+        console.log("failed");
+        });
+
+
+
+    </script>
+
+    <!---bootstrap----->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
