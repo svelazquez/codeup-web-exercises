@@ -42,34 +42,37 @@ const users = [
         console.log(result);
 //     Use .map to create an array of strings where each element
 //      is a user's email address
-        const emails = users.map ( user => user.email);
+        const emails = users.map ( users => users.email);
         console.log(emails);
 
 //     Use reduce to get the total years of experience from the list of users.
 //      Once you get the total of years you can use the result to calculate the average.
-        const exp = users.reduce ( (total, user) => {
-            return total + user.yearsOfExperience;
-        }, 0);
+
+        const exp = users.reduce ((total, users) =>
+            total + users.yearsOfExperience, 0
+        );
         console.log(exp);
 
 //     Use reduce to get the longest email from the list of users.
-//         const longboi = users.reduce((total, user) =>{
-//             const arr = users.email.split('');
-//
-//         }, 0);
-//         console.log(longboi)
+        const longboi = emails.reduce((total, email) => {
+                if (email.length > total.length)
+                    return email;
+                else
+                    return total;
+            }
+        , "");
+        console.log(`longest is ${longboi}`);
 
 //     Use reduce to get the list of user's names in a single string.
 //      Example: Your instructors are: ryan, luis, zach, fernando, justin.
-        const names = users.reduce ((total, user) => {
-            return total + " " + user.name;
-        },'');
+        const names = users.reduce ((total, users) =>
+            total + " " + users.name,
+        '');
         console.log(`Your instructors are${names}`);
+
 //     Use reduce to get the unique list of languages from the list of users.
         const langs = users.reduce ((total, users) =>
-            {
-                for(let language of languages){
-                    return user.langauges
-                }
-            }, ' ');
+
+                total + users.languages + "\n"
+            , '');
         console.log(langs);
